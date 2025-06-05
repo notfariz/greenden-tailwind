@@ -15,7 +15,7 @@
 
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6 md:hidden">
             <path fill-rule="evenodd"
                 d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
                 clip-rule="evenodd" />
@@ -42,17 +42,41 @@
 
     </nav>
 
+    <!-- side navbar -->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh; right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+
+        <ul class="flex flex-col gap-10 items-center text-gray-600">
+                         
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a class="hover:underline hover:text-black" href="product.html">Products</a>
+            </li>
+
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+    </section>
+
     <!-- Search section -->
     <section class="text-center">
         <h1 class="text-5xl font-bold mt-10">Our Products</h1>
-        <input type="text" class="border border-black p-2 m-3 text-black placeholder-black bg-white rounded-md 
+        <input id="search" type="text" class="border border-black p-2 m-3 text-black placeholder-black bg-white rounded-md 
          hover:shadow-xl hover:scale-105 
          transition duration-300 ease-in-out transform" style="width: 80%;" placeholder="Search for a product">
     </section>
 
     <!-- products grid -->
     <section class="p-4 text-center">
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+
+        <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
             <!-- card 1 -->
             <div>
                 <img src="./images/bestseller-1.png" alt="rose plant"
@@ -117,6 +141,8 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, eligendi.</p>
         <p>@2025 Greenden.com</p>
     </section>
+
+    <script src="product.js"></script>
 </body>
 
 </html>
